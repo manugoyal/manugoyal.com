@@ -1,6 +1,6 @@
 var myApp = angular.module('myApp', []);
 
-myApp.directive('myAnchor', function() {
+myApp.directive('mySection', function() {
     return {
         restrict: 'E',
         transclude: true,
