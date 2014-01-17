@@ -1,0 +1,14 @@
+p,
+strong,
+li {
+  font-size: 18px;
+}
+img.sidepic {
+  width: 150px;
+}
+
+@media (max-width: 991px) {
+    img.sidepic {
+        display:none;
+    }
+}

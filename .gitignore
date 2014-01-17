@@ -1,3 +1,4 @@
 *~
 *.zip
 dns-nameservers
+bower_components*
