@@ -1,14 +1,17 @@
 p,
 strong,
 li {
-  font-size: 18px;
+    font-size: 18px;
 }
 img.sidepic {
-  width: 150px;
+    width: 150px;
+}
+img.titlepic {
+    width: inherit;
 }
 
 @media (max-width: 991px) {
-    img.sidepic {
-        display:none;
+    img {
+        display: none !important;
     }
 }

@@ -1,5 +1,5 @@
 ADDRESS = s3://manugoyal.com
-COMMAND = s3cmd sync --exclude '*.git*' --exclude '.gitignore' --exclude 'Makefile' --exclude-from '.gitignore' ./ $(ADDRESS)
+COMMAND = s3cmd sync --exclude '*.git*' --exclude '.gitignore' --exclude 'Makefile' --exclude-from '.gitignore' --delete-removed ./ $(ADDRESS)
 
 sync:
 	$(COMMAND)
@@ -13,6 +13,7 @@ size:
 deps:
 	bower install angular
 	bower install bootstrap
-	mkdir vendor
+	mkdir -p vendor
 	cp bower_components/bootstrap/dist/css/bootstrap.min.css vendor/
 	cp bower_components/angular/angular.min.js vendor/
+	cp bower_components/angular/angular.min.js.map vendor/
