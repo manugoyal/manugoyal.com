@@ -51,7 +51,7 @@ myApp.directive('myP', function() {
             if (!angular.isUndefined(scope.sidepic)) {
                 element.append('<div class="col-md-6">' +
                                '<a href="' + scope.piclink + '">' +
-                               '<img class="sidepic" src="' + scope.sidepic + '">' +
+                               '<img class="sidepic hidden-xs hidden-sm" src="' + scope.sidepic + '">' +
                                '</img></a></div>');
             }
         }
