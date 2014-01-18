@@ -1,11 +1,9 @@
 <!DOCTYPE HTML>
-<html ng-app="myApp">
+<html>
   <head>
     <title> Manu Goyal </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.png?v=1" type="image/png" />
-
-    <link rel="stylesheet" href="vendor/bootstrap.min.css" />
     <link rel="stylesheet" href="styles.css" />
 
   </head>
@@ -14,11 +12,12 @@
     <div class="jumbotron">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-6">
+          <div class="medium-half">
             <div class="row">
               <h1> Manu Goyal </h1>
             </div>
             <div class="row">
+              <img class="smaller-medium-visible tinypic pull-left" src="content/manu.jpg" alt="manu"></img>
               <p class="lead"> I'm a first year undergraduate student at UC
                 Berkeley. Currently I'm pursuing a BS in EECS. For the
                 past two summers, I've interned
@@ -28,8 +27,8 @@
                 Mellon University. </p>
             </div>
           </div>
-          <div class="col-md-6 hidden-xs hidden-sm">
-            <img class="titlepic" src="content/manu.jpg"></img>
+          <div class="medium-half">
+            <img class="titlepic hidden-xs hidden-sm" src="content/manu.jpg" alt="manu"></img>
           </div>
         </div>
       </div>
@@ -37,90 +36,122 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-xs-12">
-          <my-section link="contact"> Contact </my-section>
-          <my-p>
-            <a href="mailto:manu.goyal2013@gmail.com">manu.goyal2013@gmail.com</a>
-          </my-p>
-          <my-p>
-            (415)-633-6902
-          </my-p>
-          <my-p>
-            <ul class="list-inline">
-              <li><a href="content/resume.pdf">Resume</a></li>
-              <li><a href="https://github.com/manugoyal">GitHub</a></li>
-              <li><a href="http://www.linkedin.com/in/mngyl">LinkedIn</a></li>
-              <li><a href="https://www.facebook.com/mngyl">Facebook</a></li>
-            </ul>
-          </my-p>
+        <div class="medium-half page-header">
+            <h2 id="contact"> Contact </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-half">
+          <p><a href="mailto:manu.goyal2013@gmail.com">manu.goyal2013@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-half">
+          <p>(415)-633-6902</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-half">
+          <ul class="list-inline">
+            <li><a href="content/resume.pdf">Resume</a></li>
+            <li><a href="https://github.com/manugoyal">GitHub</a></li>
+            <li><a href="http://www.linkedin.com/in/mngyl">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/mngyl">Facebook</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-xs-12">
-          <my-section link="work"> Work Experience </my-section>
-          <my-job-title date="2012, 2013" link="memsql"> 
-            <a href="http://www.memsql.com/">MemSQL</a>
-          </my-job-title>
-          <my-p sidepic="content/memsql.jpg" piclink="http://www.memsql.com/">
-            <ul>
-              <li>Software engineering intern intern during summers
-                of 2012 and 2013</li>
-              <li>Worked on a scalable, in-memory database</li>
-              <li>Implemented foreign keys with referential
-                integrity</li>
-              <li>Contributed to the frontend dashboard</li>
-              <li>Developed a tool to replicate between MySQL and
-                MemSQL</li>
-              <li>Implemented several aggregate and builtin
-                functions</li>
-              <li>Fixed dozens of bugs to stabilize the engine
-                before the first public release</li>
-            </ul>
-          </my-p>
+        <div class="medium-half page-header">
+          <h2 id="work"> Work Experience </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="job-title">
+          <a id="memsql" href="http://www.memsql.com/">MemSQL</a>
+        </div>
+        <div class="job-date"> 2012, 2013 </div>
+      </div>
+      <div class="row">
+        <div class="medium-half">
+          <ul>
+            <li>Software engineering intern intern during summers
+              of 2012 and 2013</li>
+            <li>Worked on a scalable, in-memory database</li>
+            <li>Implemented foreign keys with referential
+              integrity</li>
+            <li>Contributed to the frontend dashboard</li>
+            <li>Developed a tool to replicate between MySQL and
+              MemSQL</li>
+            <li>Implemented several aggregate and builtin
+              functions</li>
+            <li>Fixed dozens of bugs to stabilize the engine
+              before the first public release</li>
+          </ul>
+        </div>
+        <div class="medium-half">
+          <a href="http://www.memsql.com/">
+            <img class="sidepic smaller-medium-hidden" src="content/memsql.png" alt="memsql"></img>
+          </a>
         </div>
       </div>
 
       <div class="row">
-        <div class="col-xs-12">
-          <my-section link="research"> Research </my-section>
-          <my-job-title date="2013" link="dga-cmu"> CMU &mdash;
-            <a href="https://www.cs.cmu.edu/~dga/">Dave Andersen</a>
-          </my-job-title>
-          <my-p sidepic="content/cmu.jpg" piclink="http://www.cmu.edu/index.shtml">
-            <ul>
-              <li>Worked
-                on <a href="https://github.com/efficient/libcuckoo">libcuckoo</a>,
-                a high-speed, memory-efficient, hash table designed for
-                high levels of concurrency</li>
-              <li>Implemented a general purpose, industrial-quality
-                version of the table in C++</li>
-              <li>Improved the design to support concurrent expansion
-                and concurrent writers</li>
-            </ul>
-          </my-p>
+        <div class="medium-half page-header">
+          <h2 id="research"> Research </h2>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="job-title">
+          CMU &mdash;
+          <a id="dga-cmu" href="https://www.cs.cmu.edu/~dga/"> 
+            Dave Andersen </a>
+        </div>
+        <div class="job-date"> 2013 </div>
+      </div>
+      <div class="row">
+        <div class="medium-half">
+          <ul>
+            <li>Worked
+              on <a href="https://github.com/efficient/libcuckoo">libcuckoo</a>,
+              a high-speed, memory-efficient, hash table designed for
+              high levels of concurrency</li>
+            <li>Implemented a general purpose, industrial-quality
+              version of the table in C++</li>
+            <li>Improved the design to support concurrent expansion
+              and concurrent writers</li>
+          </ul>
+        </div>
+        <div class="medium-half">
+          <a href="http://www.cmu.edu/index.shtml">
+            <img class="sidepic smaller-medium-hidden" src="content/cmu.jpg" alt="cmu"></img>
+          </a>
+        </div>
+      </div>
 
-          <my-job-title date="2011-2012" link="dg-cmu"> CMU &mdash;
-            <a href="http://www.mpi-sws.org/~dg/">Deepak Garg</a>
-          </my-job-title>
-          <my-p>
-            <ul>
-              <li> Worked on a tool that can automatically find
-                violations in patent privacy policies like HIPAA </li>
-              <li> Implemented a concurrent policy-checking
-                algorithm </li>
-              <li> Created in-memory and database-backed representations
-                of the versioned policy data structure </li>
-              <li> Built a custom multithreaded webserver and interactive
-                front-end </li>
-            </ul>
-          </my-p>
+      <div class="row">
+        <div class="job-title">
+          CMU &mdash;
+          <a id="dg-cmu" href="http://www.mpi-sws.org/~dg/">Deepak Garg</a>
+        </div>
+        <div class="job-date"> 2011-2012 </div>
+      </div>
+      <div class="row">
+        <div class="medium-half">
+          <ul>
+            <li> Worked on a tool that can automatically find
+              violations in patent privacy policies like HIPAA </li>
+            <li> Implemented a concurrent policy-checking
+              algorithm </li>
+            <li> Created in-memory and database-backed representations
+              of the versioned policy data structure </li>
+            <li> Built a custom multithreaded webserver and interactive
+              front-end </li>
+          </ul>
         </div>
       </div>
     </div>
-
-    <script src="vendor/angular.min.js"></script>
-    <script src="script.js"></script>
 
   </body>
 </html>
