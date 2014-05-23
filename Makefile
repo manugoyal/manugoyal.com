@@ -13,7 +13,6 @@ dry-run:
 	$(COMMAND) --dry-run
 	$(CSSCMD) --dry-run
 
-
 size:
 	s3cmd du $(BUCKET)
 
