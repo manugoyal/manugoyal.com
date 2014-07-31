@@ -1,9 +1,9 @@
 BUCKET = s3://manugoyal.com
-COMMAND = s3cmd sync --exclude '*.git*' --exclude '.gitignore' --exclude 'Makefile' --exclude-from '.gitignore' --delete-removed ./ $(BUCKET)
+COMMAND = s3cmd sync --delete-removed dist/ $(BUCKET)
 
 # S3 gets the MIME type for style.css wrong, so we have to repush it
 # manually
-CSSCMD = s3cmd -m text/css put styles.css $(BUCKET)
+CSSCMD = s3cmd -m text/css put dist/styles.css $(BUCKET)
 
 sync:
 	$(COMMAND)
