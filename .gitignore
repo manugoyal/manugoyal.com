@@ -4,3 +4,5 @@ dns-nameservers
 bower_components*
 content/*.ai
 .DS_Store
+node_modules*
+dist*

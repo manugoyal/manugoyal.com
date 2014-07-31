@@ -17,8 +17,5 @@ size:
 	s3cmd du $(BUCKET)
 
 deps:
-	bower install bootstrap
-	mkdir -p vendor
-	cp bower_components/bootstrap/dist/css/bootstrap.min.css vendor/
-	cp bower_components/angular/angular.min.js vendor/
-	cp bower_components/angular/angular.min.js.map vendor/
+	bower install
+	npm install
