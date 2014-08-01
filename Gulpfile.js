@@ -1,9 +1,6 @@
 var gulp = require('gulp'),
-    browserify = require('gulp-browserify'),
-    concat = require('gulp-concat'),
     del = require('del'),
-    watch = require('gulp-watch'),
-    argv = require('yargs');
+    watch = require('gulp-watch');
 
 
 // Removes the dist directory
