@@ -1,20 +1,15 @@
 BUCKET = s3://manugoyal.com
-COMMAND = s3cmd sync --delete-removed dist/ $(BUCKET)
-
-# S3 gets the MIME type for style.css wrong, so we have to repush it
-# manually
-CSSCMD = s3cmd -m text/css put dist/styles.css $(BUCKET)
+PREFIX = aws --profile manu.goyal2013 s3
+SYNCCMD = $(PREFIX) sync --delete dist/ $(BUCKET)
 
 sync:
-	$(COMMAND)
-	$(CSSCMD)
+	$(SYNCCMD)
 
-dry-run:
-	$(COMMAND) --dry-run
-	$(CSSCMD) --dry-run
+dryrun:
+	$(SYNCCMD) --dryrun
 
 size:
-	s3cmd du $(BUCKET)
+	$(PREFIX) ls --recursive $(BUCKET) | awk '{print $$3}'
 
 deps:
 	bower install
