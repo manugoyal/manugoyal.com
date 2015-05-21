@@ -1,6 +1,6 @@
 @media(min-width: 992px) {
     #myJumbotron {
-        background-image: url(images/headshot.png);
+        background-image: url(images/headshot_small.png);
         background-position: right bottom;
         background-size: auto 75%;
         background-repeat: no-repeat;
